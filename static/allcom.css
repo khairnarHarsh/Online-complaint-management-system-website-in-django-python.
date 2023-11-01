@@ -1,0 +1,55 @@
+.title{
+    font-size: 16px;
+    font-family: 'serif,Times New Roman';
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px ;
+    box-shadow: 1px 1px 8px 0 grey;
+    margin-top: 80px;
+    background-color: white;
+}
+body{
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.tab{
+    padding: 5px;
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 1px 1px 8px 0 grey;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+}
+table, td, th {  
+    border: 1px solid grey;
+    text-align: left;
+    color: black;
+    background-color: white;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  
+  th, td {
+    padding: 15px;
+  }
+  .fil label{
+    font-size: 20px;
+    
+  }
+  .fil {
+    margin-top: 20px;
+    margin-left: 50px;
+    display: inline-block;
+  }
+  .fil1 {
+    margin-top: 20px;
+    margin-left: 150px;
+    display: inline-block;
+    font-size: 20px;
+  }

@@ -1,0 +1,41 @@
+{% extends 'navigation.html' %}
+{% block body%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>we are created a complaint management system  website.</p>
+        <p>It will help to track,organize and resolve students and staff complaints .</p>
+      </div>
+      
+      <h2 style="text-align:center">Developed By</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            {% comment %} <img src="{% static 'kk.jpg' %}" alt="Jane" style="width:50%"> {% endcomment %}
+            <div class="container">
+              <h2>Harshad Khairnar</h2>
+              <p class="title">Front end Web Developer</p>
+              <p>we creates Website and application using <br>web languages such as HTML,CSS and python</p>
+              <p>hkhairnar203@gmail.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        
+      </div>
+    
+</body>
+</html>
+{%endblock body%}

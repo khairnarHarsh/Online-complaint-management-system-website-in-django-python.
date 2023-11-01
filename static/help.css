@@ -1,0 +1,59 @@
+.heading{
+    margin:10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px grey;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+}
+*{
+    padding: 0;
+}
+
+.content{
+    margin: 10px;
+    border-radius: 10px;
+    height:auto;
+    width: 70%;
+    box-shadow: 0px 4px 8px 0px grey;
+    font-size: 10px;
+    color: black;
+    margin-bottom:20px;
+    
+}
+.content h2{
+    font-size: 18px;
+}
+.content .title{
+    font-size: 30px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    background-color:azure;
+    justify-content:center;
+
+    /* margin-left: 40%; */
+}
+.que p {
+    font-size: 18px;
+    
+    color: black;
+    box-shadow: 0px 4px 8px 0px grey;
+
+}
+.que .a1{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.que .ans{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+body{
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content{
+    background-color: white;
+}
