@@ -1,0 +1,51 @@
+{% extends 'navigation.html' %}
+{% block body%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solved complaints</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'solvedcom.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <div class="title">
+        <h2> Unsolved Complaints</h2>
+    </div>
+
+    <div class="tab">
+        <table>
+            <tr>
+              <th>Id</th>
+              <th>Subject</th>
+              <th>Complaint type</th>
+              <th>Issued date</th>
+              
+              {% comment %} <th>Status</th> {% endcomment %}
+            </tr>
+            
+            {% for i in data %}
+            <tr>
+              <td>{{i.id}}</td>
+              <td>{{i.Subject}}</td>
+              <td>{{i.Type_of_complaint}}</td>
+              <td>{{i.Time}}</td>
+              
+             
+              
+             
+              
+              {% comment %} <td>{{i.status}}</td> {% endcomment %}
+            </tr>
+            
+            {% endfor %}
+           
+ 
+          
+    </div>
+</body>
+</html>
+{%endblock body%}

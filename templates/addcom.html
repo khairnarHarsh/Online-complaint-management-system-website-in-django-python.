@@ -1,0 +1,72 @@
+
+{% extends 'base_admin.html' %}
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add complaint</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'addcom.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+
+    <div class="title">
+        <h2>Add Complaint</h2>
+    </div>
+   
+    <div class="box">
+        <div class="container">
+            <form action="" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+          
+              <label>Subject</label>
+              <input type="text" id="fname" name="subject" placeholder="Subject of complaint">
+          
+              <label >Type of Complaint</label>
+              <input type="text"  name="complaint" placeholder="Enter type of complaint">
+          
+              <label >Branch</label>
+              <select  name="Branch">
+                <option value="bca">BCA</option>
+                <option value="mca">MCA</option>
+                <option value="bba">BBA</option>
+                <option value="mba">MBA</option>
+                <option value="b.com">B.COM</option>
+                <option value="m.com">M.COM</option>
+              </select>
+          
+              <label for="Discription">Discription</label>
+              <textarea name="Description"  placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit"  onclick="openPopup()" value="Submit">
+                <div class="popup" id="popup">
+                  <img src="{% static 'checked.png' %}" >
+                  <h2>Thank You</h2>
+                  <p>your complaint has been registered .</p>
+                  <button type="submit" onclick="closePopup()">OK</button>
+                </div>
+          
+            </form>
+          </div>
+    </div>
+    
+    <script>
+      let popup= document.getElementById("popup")
+
+      function openPopup(){
+          popup.classList.add("open-popup");
+      }
+
+      function openPopup(){
+          popup.classList.remove("open-popup");
+      }
+  </script>
+
+
+{% endblock %}
+</body>
+</html>

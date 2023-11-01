@@ -1,0 +1,181 @@
+{% extends 'navigation.html' %}
+{% block body%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  {% load static %}
+    <link rel="stylesheet" href="{% static 'admin_dash.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="icon">
+        <h4 class="logo">KCES'S<br>COLLEGE</h4>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'home'%}">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/login1">Logout</a></li>
+            <li><a href="/regist">Register</a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="info">
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>adminPage</title>
+
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FontAwesome 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar top -->
+  <div class="navbar-top">
+    <div class="title">
+      <h1>Admin Profile</h1>
+    </div>
+
+  </div>
+  <!-- End -->-
+
+  <!-- Sidenav -->
+  <div class="sidenav">
+    <div class="profile">
+      <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100" height="100">
+
+      <div class="name">
+        Admin
+      </div>
+      
+    </div>
+
+    <div class="sidenav-url">
+      <div class="url">
+        <a href="#profile" class="active"> Admin Profile</a>
+        <hr align="center">
+      </div>
+      <div class="url">
+        <a href="#settings">Settings</a>
+        <hr align="center">
+      </div>
+      <div class="url">
+        <a href="#settings">Logout</a>
+        <hr align="center">
+      </div>
+      <div class="url">
+        <a href="{% url  'addcom' %}">Manage<br> Complaint</a>
+        <hr align="center">
+      </div>
+    </div>
+  </div>
+  <!-- End -->
+
+  <!-- Main -->
+  <div class="main">
+    <h2>IDENTITY</h2>
+    <div class="card">
+      <div class="card-body">
+        <i class="fa fa-pen fa-xs edit"></i>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>:</td>
+              <td>ImDezCode</td>
+            </tr>
+            <tr>
+              <td>username</td>
+              <td>:</td>
+              <td>imdezcode@202</td>
+            </tr>
+            <tr>
+              <td>password</td>
+              <td>:</td>
+              <td>pass@123</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>:</td>
+              <td>user@1gmail.com</td>
+            </tr>
+            <tr>
+              <td>Contact No.</td>
+              <td>:</td>
+              <td>0125845785</td>
+            </tr>
+            <tr>
+              <td>gender</td>
+              <td>:</td>
+              <td>female</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  
+  </div>
+  <!-- End -->
+  <div class="options">
+    
+    <div class="op">
+      <a href="{% url 'addcom' %}" class="active">add complaint</a>
+      <hr align="center">
+    </div>
+    <div class="op">
+      <a href="{% url 'allcom'%}" class="active">All complaits</a>
+      <hr align="center">
+    </div>
+
+  </div>
+
+  <div class="options2">
+    
+    <div class="op2">
+      <a href="{% url 'solvedcom'%}" class="active">Solved Complaints</a>
+      <hr align="center">
+    </div>
+    <div class="op2">
+      <a href="{% url 'unsolvedcom'%}" class="active">Unsolved Complaints</a>
+      <hr align="center">
+    </div>
+
+  </div>
+
+  
+  <div class="options3">
+    
+    <div class="op3">
+      <a href="{% url 'help'%}" class="active">feedback</a>
+      <hr align="center">
+    </div>
+    <div class="op3">
+      <a href="#complaint" class="active">review</a>
+      <hr align="center">
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+  </div>
+
+  
+  
+</body>
+</html>{%endblock body%}

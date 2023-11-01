@@ -1,0 +1,51 @@
+{% extends "navigation.html"%}
+{% load static %}
+{% block body%}
+<link rel="stylesheet" href="{% static 'studentlog.css' %}">
+
+<div class="full-page">
+
+  <div class="title">
+    <h2>Student/Staff Login</h2>
+  </div>
+  <section >
+
+    <div class="formbox">
+      <div class="form-value">
+
+        <form method="post">
+          {% csrf_token %}
+          <div class="imgcontainer">
+            <img src="{% static 'studlog.png' %}" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pass" required>
+            <div class="active">
+              <button type="submit">Login</button>
+            </div>
+            <label class="l2">
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <label class="l1">
+              <a href="{% url 'regist'%}">create an account</a>
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock body%}

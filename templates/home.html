@@ -1,0 +1,21 @@
+{% extends 'navigation.html' %}
+{% block body%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+
+<body style="background-image:url('{%static '18.jpg'%}') ; background-repeat:no-repeat;" >
+{% csrf_token %}
+<div class="content" >
+    <h1>KCES'S College<br><span>Complaint</span><br> Management</h1>
+    <div class="par">Khadesh College Education Society's College of Engineering And management,Jalgaon.In 
+        order to streamline <br>complaint registraton requests and resolution of 
+        students/staffcomplaints,we utilize a  <br>complaint management system.<br>We are commited to protecting your privacy as per aims
+         .we respect your privacy protection of personal information<br> from being displayed in public</p>
+
+        <div class="img">
+            <!-- <img src="{% static 'work.png' %}" alt="cmsimg" width="400px" height="300px"> -->
+        </div>
+    </div>
+    
+</div>
+</body>{%endblock body%}

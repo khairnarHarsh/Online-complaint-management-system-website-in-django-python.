@@ -1,0 +1,61 @@
+{% extends 'navigation.html' %}
+{% block body%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+ 
+
+</head>
+
+<body >
+{% load static %}
+<link rel="stylesheet" href="{% static 'login1.css' %}">
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<form method="POST" name="login">
+    {% csrf_token %}
+
+    {% comment %} <div class="navbar">
+        <div class="icon">
+            <h4 class="logo">KCES'S<br>COLLEGE</h4>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                
+                <li><a href="/regist">Register</a></li>
+            </ul>
+        </div>
+    </div> {% endcomment %}
+    <div class="main">
+        <div class="abc">
+            <center>
+                <h1>Complaint Management System</h1>
+            </center>
+            <center class="h2">Choose your Preferred Login Below</center>
+        </div>
+        <div class="imagess">
+            <a href="/studentlog"><img src="{% static 'studentlog.png' %}"></a>
+            <a href="/admin"><img src="{% static 'adminlog.png' %}"></a>
+        </div>
+        <div class="buttons">
+            <div class="op">
+                <a href="/studentlog" class="active">User Login</a>
+            </div>
+            <div class="op1">
+                <a href="/admin" class="active">Admin Login</a>
+            </div>
+        </div>
+    </div>
+
+
+
+</form>
+</body>
+
+</html>{%endblock body%}

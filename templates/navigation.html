@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="icon">
+            <h4 class="logo">KCES'S<br>COLLEGE</h4>
+        </div>
+        <div class="menu">
+            <nav>
+            <ul>
+                <li><a href=" ">Home</a></li>
+            {% if request.user.is_authenticated%}
+                <li><a href="/profile">profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+               
+            {% else %}
+                <li><a href="/about">About Us</a></li>
+                <li><a href="{% url 'login1'%}">Login</a></li>
+                <li><a href="/regist">Register</a></li>
+                
+            {% endif %}
+                
+            </nav>  
+            </div>
+                <!-- <nav>
+                    <img src="{% static 'studlog.png' %}" class="logo" onclick="toggleMenu()">
+                    <div class="sub-menu" id="subMenu">
+                        <div class="sub">
+                            <div class="user-info">
+                                <img src="{% static 'studlog.png' %}">
+                                <h2> user name</h2>
+                            </div>
+                            <hr>
+                            <a href="#" class="sub-link">
+                                <img  src="{% static 'profile.png' %}">
+                                <p>edit profile</p>
+                                <span>></span>
+                            </a>
+                            <a href="#" class="sub-link">
+                                <img  src="{% static 'logout.png' %}">
+                                <p>Logout</p>
+                                <span>></span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </nav> -->
+            </ul>
+       
+        <script>
+            let subMenu = document.getElementById("sunMenu");
+
+            function toggleMenu() {
+                subMenu.classList.toggle("Open-menu");
+            }
+        </script>
+
+    </nav>
+    {%block body%}
+    {%endblock body%}
+</body>
+{% for i in messages%}
+<script>
+    alert('{{i}}')
+</script>
+{% endfor%}
+
+</html>

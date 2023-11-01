@@ -1,0 +1,35 @@
+{% extends 'navigation.html' %}
+{% block body%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=    def __str__(self) :
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <!-- <div class="icon">
+            <h4 class="logo">KCES'S<br>COLLEGE</h4>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href=" ">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="{% url 'login1'%}">Login</a></li>
+                <li><a href="/regist">Register</a></li>
+            </ul>
+        </div> -->
+        {% block main %}
+        {% endblock %}
+    </div>
+{% for i in messages%}
+<script>
+    alert('{{i}}')
+</script>
+</body>
+</html>
+{% endfor %}
+{%endblock body%}
